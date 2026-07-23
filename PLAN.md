@@ -1,14 +1,14 @@
 ## Tech Stack
 
-* Next.js (App Router) + TypeScript
-* PostgreSQL + Prisma
-* NextAuth/Auth.js
-* Tailwind CSS + shadcn/ui
-* Stripe (payments)
+- Next.js (App Router) + TypeScript
+- PostgreSQL + Prisma
+- NextAuth/Auth.js
+- Tailwind CSS + shadcn/ui
+- Stripe (payments)
 
 ---
 
-# Phase 1 - Project Setup
+# Phase 1 - Project Setup ✅
 
 ```
 app/
@@ -22,15 +22,15 @@ hooks/
 
 Configure:
 
-* Prisma
-* Database
-* Authentication
-* Tailwind
-* shadcn/ui
+- Prisma
+- Database
+- Authentication
+- Tailwind
+- shadcn/ui
 
 ---
 
-# Phase 2 - Database
+# Phase 2 - Database ✅
 
 ### User
 
@@ -106,11 +106,11 @@ quantity
 
 # Phase 3 - Authentication
 
-* Register
-* Login
-* Logout
-* Protected routes
-* Admin role
+- Register
+- Login
+- Logout
+- Protected routes
+- Admin role
 
 ---
 
@@ -118,12 +118,12 @@ quantity
 
 Sections:
 
-* Hero
-* Featured Books
-* Best Sellers
-* New Arrivals
-* Categories
-* Footer
+- Hero
+- Featured Books
+- Best Sellers
+- New Arrivals
+- Categories
+- Footer
 
 ---
 
@@ -131,19 +131,19 @@ Sections:
 
 ### Books Page
 
-* Search
-* Pagination
-* Category filter
-* Price filter
-* Sort
+- Search
+- Pagination
+- Category filter
+- Price filter
+- Sort
 
 ### Book Details
 
-* Images
-* Description
-* Stock
-* Author
-* Add to Cart
+- Images
+- Description
+- Stock
+- Author
+- Add to Cart
 
 ---
 
@@ -151,22 +151,22 @@ Sections:
 
 Features
 
-* Add
-* Remove
-* Increase quantity
-* Decrease quantity
-* Clear cart
-* Cart total
+- Add
+- Remove
+- Increase quantity
+- Decrease quantity
+- Clear cart
+- Cart total
 
 ---
 
 # Phase 7 - Checkout
 
-* Shipping details
-* Order summary
-* Payment
-* Order creation
-* Success page
+- Shipping details
+- Order summary
+- Payment
+- Order creation
+- Success page
 
 ---
 
@@ -174,9 +174,9 @@ Features
 
 User can
 
-* View orders
-* View order details
-* Track status
+- View orders
+- View order details
+- Track status
 
 ---
 
@@ -184,28 +184,28 @@ User can
 
 Books
 
-* Create
-* Edit
-* Delete
+- Create
+- Edit
+- Delete
 
 Categories
 
-* CRUD
+- CRUD
 
 Orders
 
-* Update status
+- Update status
 
 Users
 
-* List users
+- List users
 
 Dashboard
 
-* Revenue
-* Orders
-* Books sold
-* Low stock
+- Revenue
+- Orders
+- Books sold
+- Low stock
 
 ---
 
@@ -250,38 +250,38 @@ Toast
 
 Use Zod for:
 
-* Login
-* Register
-* Book creation
-* Checkout
-* Category
-* Profile
+- Login
+- Register
+- Book creation
+- Checkout
+- Category
+- Profile
 
 ---
 
 # Phase 13 - Optimization
 
-* Image optimization
-* Server Components
-* Route Handlers
-* Caching
-* Pagination
-* Suspense
-* Lazy loading
+- Image optimization
+- Server Components
+- Route Handlers
+- Caching
+- Pagination
+- Suspense
+- Lazy loading
 
 ---
 
 # Phase 14 - Nice-to-have Features
 
-* Wishlist
-* Book reviews
-* Ratings
-* Related books
-* Recently viewed
-* Coupon codes
-* Inventory alerts
-* Email receipts
-* Dark mode
+- Wishlist
+- Book reviews
+- Ratings
+- Related books
+- Recently viewed
+- Coupon codes
+- Inventory alerts
+- Email receipts
+- Dark mode
 
 ---
 
@@ -301,4 +301,94 @@ Use Zod for:
 12. Optimization
 13. Extra features
 
-This order lets you ship a usable MVP early, then add management and advanced features incrementally.
+
+app/
+├── (public)/
+│ ├── page.tsx
+│ ├── books/
+│ │ ├── page.tsx
+│ │ └── [id]/page.tsx
+│ └── categories/
+│
+├── (auth)/
+│ ├── login/page.tsx
+│ └── register/page.tsx
+│
+├── (protected)/
+│ ├── cart/page.tsx
+│ ├── checkout/page.tsx
+│ ├── orders/
+│ └── profile/
+│
+├── admin/
+│ ├── dashboard/
+│ ├── books/
+│ ├── categories/
+│ ├── orders/
+│ └── users/
+│
+├── api/
+│ ├── auth/
+│ │ ├── login/route.ts
+│ │ ├── register/route.ts
+│ │ ├── logout/route.ts
+│ │ └── refresh/route.ts
+│ │
+│ ├── books/
+│ ├── cart/
+│ ├── orders/
+│ └── payments/
+│
+├── layout.tsx
+├── page.tsx
+└── globals.css
+
+features/
+├── auth/
+│ ├── auth.service.ts
+│ ├── auth.repository.ts
+│ ├── auth.validation.ts
+│ ├── auth.types.ts
+│ ├── auth.utils.ts
+│ └── auth.constants.ts
+│
+├── books/
+│ ├── book.service.ts
+│ ├── book.repository.ts
+│ ├── book.validation.ts
+│ ├── book.types.ts
+│ └── components/
+│
+├── cart/
+│ ├── cart.service.ts
+│ ├── cart.repository.ts
+│ ├── cart.validation.ts
+│ └── cart.types.ts
+│
+├── orders/
+├── categories/
+└── users/
+
+components/
+├── ui/
+├── shared/
+└── common/
+
+lib/
+├── prisma.ts
+├── jwt.ts
+├── password.ts
+├── cookies.ts
+├── middleware.ts
+├── constants.ts
+└── utils.ts
+
+prisma/
+├── schema.prisma
+└── migrations/
+
+types/
+└── index.ts
+
+hooks/
+middleware.ts

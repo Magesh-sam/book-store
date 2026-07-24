@@ -26,7 +26,12 @@ export async function registerUser(user: RegisterUser) {
     password: hashedPassword,
   });
 
-  return createdUser;
+  return {
+    id: createdUser.id,
+    name: createdUser.name,
+    email: createdUser.email,
+    role: createdUser.role,
+  };
 }
 
 export async function loginUser({
@@ -46,5 +51,13 @@ export async function loginUser({
   if (!existingUser) {
     throw new Error("User does not exist");
   }
-  return existingUser;
+  if (existingUser.password !== password) {
+    throw new Error("Invalid credentials");
+  }
+  return {
+    id: existingUser.id,
+    name: existingUser.name,
+    email: existingUser.email,
+    role: existingUser.role,
+  };
 }
